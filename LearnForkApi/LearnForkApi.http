@@ -1,0 +1,6 @@
+@LearnForkApi_HostAddress = http://localhost:5190
+
+GET {{LearnForkApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
