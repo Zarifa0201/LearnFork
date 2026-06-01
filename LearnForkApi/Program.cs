@@ -15,6 +15,15 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+app.MapGet("/", () => "LearnFork API is running. Open /swagger to test endpoints.");
+
+app.MapGet("/health", () => Results.Ok(new
+{
+    status = "Healthy",
+    service = "LearnFork API",
+    timestamp = DateTime.UtcNow
+}));
+
 app.MapControllers();
 
 app.Run();
